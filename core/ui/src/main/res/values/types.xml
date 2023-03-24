@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--region Headline-->
+    <style name="TextAppearance.MathApp.DisplayLarge" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="TextAppearance.MathApp.DisplayMedium" parent="TextAppearance.Material3.DisplayMedium">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="TextAppearance.MathApp.DisplaySmall" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="TextAppearance.MathApp.HeadlineLarge" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="TextAppearance.MathApp.HeadlineMedium" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="TextAppearance.MathApp.HeadlineSmall" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="TextAppearance.MathApp.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/expletus_semibold</item>
+        <item name="android:fontFamily">@font/expletus_semibold</item>
+    </style>
+
+    <style name="TextAppearance.MathApp.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="fontFamily">@font/expletus_semibold</item>
+        <item name="android:fontFamily">@font/expletus_semibold</item>
+    </style>
+
+    <style name="TextAppearance.MathApp.TitleSmall" parent="TextAppearance.Material3.TitleSmall">
+        <item name="fontFamily">@font/expletus_semibold</item>
+        <item name="android:fontFamily">@font/expletus_semibold</item>
+    </style>
+
+    <style name="TextAppearance.MathApp.LabelLarge" parent="TextAppearance.Material3.LabelLarge">
+        <item name="fontFamily">@font/expletus_semibold</item>
+        <item name="android:fontFamily">@font/expletus_semibold</item>
+    </style>
+
+    <style name="TextAppearance.MathApp.LabelMedium" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/expletus_semibold</item>
+        <item name="android:fontFamily">@font/expletus_semibold</item>
+    </style>
+
+    <style name="TextAppearance.MathApp.LabelSmall" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/mukta_regular</item>
+        <item name="android:fontFamily">@font/mukta_regular</item>
+    </style>
+
+    <style name="TextAppearance.MathApp.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="fontFamily">@font/mukta_regular</item>
+        <item name="android:fontFamily">@font/mukta_regular</item>
+    </style>
+
+    <style name="TextAppearance.MathApp.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/mukta_regular</item>
+        <item name="android:fontFamily">@font/mukta_regular</item>
+    </style>
+
+    <style name="TextAppearance.MathApp.BodySmall" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/mukta_regular</item>
+        <item name="android:fontFamily">@font/mukta_regular</item>
+    </style>
+
+</resources>

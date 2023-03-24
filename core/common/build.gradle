@@ -1,0 +1,40 @@
+plugins {
+    id("com.google.devtools.ksp")
+}
+
+android {
+    buildFeatures {
+        buildConfig true
+    }
+}
+
+dependencies {
+    api core.bundles.androidx.app
+    api platform(core.firebase.bom)
+    api core.bundles.firebase.package
+    api core.bundles.lifecycle
+    api core.bundles.kotlin
+    api core.bundles.coroutines
+    api core.bundles.splitties
+    api core.app.startup
+    api core.room.runtime
+    api core.blankj.codex
+
+    /**
+     * TODO: Enable this if want detect leak
+     * debugImplementation debugging.bundles.flipper.leak
+     */
+
+    debugApi debugging.bundles.flipper.dev
+    releaseApi debugging.bundles.flipper.dev
+
+    debugApi debugging.bundles.pluto.dev
+    releaseApi debugging.bundles.pluto.prod
+
+    implementation debugging.anrwatchdog
+    implementation core.hilt.core
+    kapt core.hilt.compiler
+    api core.gson
+    api core.lich
+    ksp core.lich.compiler
+}
