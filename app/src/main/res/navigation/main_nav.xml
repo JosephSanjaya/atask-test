@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="atask.sanjaya.math.splash.presentation.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_dashboardFragment"
+            app:destination="@id/historyFragment"
+            app:popUpTo="@id/main_nav"
+            app:popUpToInclusive="true"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="atask.sanjaya.math.history.presentation.fragment.HistoryFragment"
+        android:label="HistoryFragment"
+        tools:layout="@layout/fragment_histories"/>
+
+
+</navigation>

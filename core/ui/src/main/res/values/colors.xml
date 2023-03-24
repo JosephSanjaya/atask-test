@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="neon_blue_100">#00D9FC</color>
+    <color name="fruit_salad_100">#4CAF50</color>
+    <color name="persian_red_100">#CC2B2B</color>
+    <color name="monza_100">#D1043E</color>
+</resources>

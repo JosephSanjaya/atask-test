@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dimen_4dp"
+        app:cardElevation="@dimen/dimen_0dp"
+        app:strokeColor="?attr/colorPrimary"
+        app:strokeWidth="@dimen/dimen_1dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_16dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                android:textColor="?attr/colorPrimary"
+                app:drawableEndCompat="@drawable/baseline_calculate_24"
+                app:drawableTint="?attr/colorPrimary"
+                tools:text="2 + 2" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvResultStatic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/label_result"
+                android:textAppearance="?attr/textAppearanceLabelLarge" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:textAppearance="?attr/textAppearanceHeadlineMedium"
+                tools:text="4" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>
