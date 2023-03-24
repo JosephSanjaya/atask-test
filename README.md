@@ -40,7 +40,7 @@ To build and install this application, follow these steps:
  - Clone this repository to your local machine using Git.
 bash
 ```
-git clone https://github.com/JosephSanjaya/julo-test-cases.git
+git clone https://github.com/JosephSanjaya/atask-test.git
 ```
 - Open Android Studio and select "Open an existing Android Studio project".
 - Navigate to the root directory of the cloned repository and select the build.gradle file. 
