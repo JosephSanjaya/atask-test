@@ -6,4 +6,5 @@ dependencies {
     api ui.viewbinding.delegate
     api ui.swipe.refresh
     api ui.adapter
+    api ui.bundles.camerax
 }

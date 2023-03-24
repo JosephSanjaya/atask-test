@@ -4,6 +4,10 @@ import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
 import com.blankj.utilcode.util.AppUtils
+import com.google.crypto.tink.Aead
+import com.google.crypto.tink.aead.AeadConfig
+import com.google.crypto.tink.aead.AeadKeyTemplates
+import com.google.crypto.tink.integration.android.AndroidKeysetManager
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfig
@@ -60,4 +64,22 @@ class CommonModules {
     fun providePref(
         @ApplicationContext context: Context
     ): SharedPreferences = context.getSharedPreferences(AppUtils.getAppPackageName(), MODE_PRIVATE)
+
+    @Provides
+    @Singleton
+    fun provideAead(
+        @ApplicationContext context: Context
+    ): Aead {
+        AeadConfig.register()
+        val keysetName = "${AppUtils.getAppPackageName()}-key"
+        val masterKeyUri = "android-keystore://$keysetName"
+
+        // Get the keyset for encryption
+        val keysetManager = AndroidKeysetManager.Builder()
+            .withSharedPref(context, keysetName, AppUtils.getAppPackageName())
+            .withKeyTemplate(AeadKeyTemplates.AES256_GCM)
+            .withMasterKeyUri(masterKeyUri)
+            .build()
+        return keysetManager.keysetHandle.getPrimitive(Aead::class.java)
+    }
 }

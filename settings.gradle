@@ -41,4 +41,5 @@ dependencyResolutionManagement {
 rootProject.name = "Math App"
 include ':app', ':core', ':features'
 include ':core:common', ':core:ui', ':core:network'
-include ':features:splash', ':features:location', ':features:dashboard'
+include ':features:splash', ':features:history'
+include ':features:calculate'

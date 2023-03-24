@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_splash">
         <action
             android:id="@+id/action_splashFragment_to_dashboardFragment"
-            app:destination="@id/dashboardFragment"
+            app:destination="@id/historyFragment"
             app:popUpTo="@id/main_nav"
             app:popUpToInclusive="true"
             app:enterAnim="@android:anim/slide_in_left"
@@ -21,49 +21,10 @@
             app:popExitAnim="@android:anim/slide_out_right"/>
     </fragment>
     <fragment
-        android:id="@+id/dashboardFragment"
-        android:name="atask.sanjaya.math.dashboard.presentation.DashboardFragment"
-        android:label="DashboardFragment"
-        tools:layout="@layout/fragment_dashboard">
-        <action
-            android:id="@+id/action_dashboardFragment_to_locationSearchFragment"
-            app:destination="@id/locationSearchFragment"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right"
-            app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right"/>
-    </fragment>
+        android:id="@+id/historyFragment"
+        android:name="atask.sanjaya.math.history.presentation.fragment.HistoryFragment"
+        android:label="HistoryFragment"
+        tools:layout="@layout/fragment_histories"/>
 
-    <fragment
-        android:id="@+id/locationSearchFragment"
-        android:name="atask.sanjaya.math.location.presentation.LocationSearchFragment"
-        android:label="LocationSearchFragment"
-        tools:layout="@layout/fragment_location_search">
-        <action
-            android:id="@+id/action_locationSearchFragment_to_locationForecastFragment"
-            app:destination="@id/locationForecastFragment"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right"
-            app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right" />
-    </fragment>
-    <fragment
-        android:id="@+id/locationForecastFragment"
-        android:name="atask.sanjaya.math.location.presentation.LocationForecastFragment"
-        tools:layout="@layout/fragment_location_forecast"
-        android:label="LocationForecastFragment" >
-        <argument
-            android:name="location"
-            app:argType="atask.sanjaya.math.location.data.models.LocationData" />
-        <action
-            android:id="@+id/action_locationForecastFragment_to_dashboardFragment"
-            app:destination="@id/dashboardFragment"
-            app:popUpToInclusive="true"
-            app:popUpTo="@id/dashboardFragment"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right"
-            app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right"/>
-    </fragment>
 
 </navigation>

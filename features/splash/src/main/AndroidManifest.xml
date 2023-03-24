@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="atask.sanjaya.math.splash">
 
-    <application android:theme="@style/Theme.WeatherApp">
+    <application android:theme="@style/Theme.MathApp">
     </application>
 
 </manifest>

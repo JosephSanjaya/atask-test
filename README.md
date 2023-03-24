@@ -1,6 +1,5 @@
 ## ATASK Assignment: Scan me! calculator
-This Android application was created as a coding test case for the company JULO. Its main functionality is to provide weather predictions for temperature, wind speed, and humidity at a given location for today and up to 3 days later. The app uses two open APIs: OpenWeather and ApiNinjas.
-
+This Android application was created as a coding test case for the company ATASK. Its main functionality is to scan photo of math and give result.
 The application is built with a multi-module architecture, which includes the following submodules:
 - app
 - core
@@ -13,8 +12,8 @@ The core module contains the following submodules:
 
 The features module contains the following submodules:
 - features:splash
-- features:dashboard
-- features:location
+- features:history
+- features:calculation
 
 There are no horizontal dependencies between the features submodules, which helps to reduce spaghetti dependencies and prevent cyclic dependencies.
 
@@ -32,6 +31,8 @@ The main external libraries used in this app include:
 - Diktat as code quality gate and static analysis
 - Gradle Version catalog for gradle dependencies single source of truth
 - Room for storing local database
+- MLKit for detecting character
+- and Math Js Api to calculate result
 
 
 ## How to Build and Install
@@ -48,5 +49,3 @@ git clone https://github.com/JosephSanjaya/julo-test-cases.git
 - Select "APK" and choose your desired build variant (e.g. debug, release).
 - Once the build is complete, the APK file will be generated and can be found in the app/build/outputs/apk directory.
 - Transfer the APK file to your Android device and install it.
-
-That's it! You can now use the JULO Weather App on your Android device.

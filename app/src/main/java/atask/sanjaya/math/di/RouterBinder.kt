@@ -1,13 +1,11 @@
 package atask.sanjaya.math.di
 
+import atask.sanjaya.math.router.splash.SplashExternalRouterImpl
+import atask.sanjaya.math.splash.presentation.navigation.SplashExternalRoute
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import atask.sanjaya.math.location.presentation.router.LocationRouter
-import atask.sanjaya.math.router.location.LocationRouterImpl
-import atask.sanjaya.math.router.splash.SplashExternalRouterImpl
-import atask.sanjaya.math.splash.presentation.navigation.SplashExternalRoute
 
 /**
  * A Dagger module that binds implementations of Route to their respective Routers.
@@ -25,9 +23,4 @@ abstract class RouterBinder {
     abstract fun bindSplashExternal(
         impl: SplashExternalRouterImpl
     ): SplashExternalRoute
-
-    @Binds
-    abstract fun bindLocRouter(
-        impl: LocationRouterImpl
-    ): LocationRouter
 }
