@@ -19,6 +19,7 @@ dependencies {
     api core.app.startup
     api core.room.runtime
     api core.blankj.codex
+    api core.mlkit.text
 
     /**
      * TODO: Enable this if want detect leak

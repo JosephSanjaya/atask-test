@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style name="Theme.WeatherApp" parent="Theme.MathApp.Base">
-        <!-- Customize your theme here. -->
-    </style>
-
     <style name="Theme.MathApp.Base" parent="Theme.Material3.Light.NoActionBar">
         <item name="android:ambientShadowAlpha">0.036</item>
         <item name="android:spotShadowAlpha">0.036</item>
-        <item name="colorPrimary">@color/neon_blue_100</item>
-        <item name="colorError">@color/monza_100</item>
         <item name="textAppearanceDisplayLarge">@style/TextAppearance.MathApp.DisplayLarge</item>
         <item name="textAppearanceDisplayMedium">@style/TextAppearance.MathApp.DisplayMedium
         </item>
@@ -30,5 +23,4 @@
         <item name="textAppearanceBodyMedium">@style/TextAppearance.MathApp.BodyMedium</item>
         <item name="textAppearanceBodySmall">@style/TextAppearance.MathApp.BodySmall</item>
     </style>
-
 </resources>

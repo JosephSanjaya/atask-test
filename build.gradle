@@ -58,6 +58,21 @@ subprojects {
                         }
                     }
                 }
+                flavorDimensions "color", "input"
+                productFlavors {
+                    red {
+                        dimension "color"
+                    }
+                    green {
+                        dimension "color"
+                    }
+                    filesystem {
+                        dimension "input"
+                    }
+                    camera {
+                        dimension "input"
+                    }
+                }
                 buildFeatures {
                     dataBinding true
                     viewBinding true

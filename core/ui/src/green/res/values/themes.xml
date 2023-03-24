@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.WeatherApp" parent="Theme.MathApp.Base">
+        <item name="colorPrimary">@color/fruit_salad_100</item>
+        <item name="colorError">@color/monza_100</item>
+    </style>
+</resources>

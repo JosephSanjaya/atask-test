@@ -88,6 +88,7 @@ splitties-mainhandler       = { module = "com.louiscad.splitties:splitties-mainh
 splitties-checkedlazy       = { module = "com.louiscad.splitties:splitties-checkedlazy", version.ref = "splitties" }
 room-runtime                = { module = "androidx.room:room-runtime", version.ref = "room" }
 room-compiler               = { module = "androidx.room:room-compiler", version.ref = "room" }
+mlkit-text                  = { module = "com.google.android.gms:play-services-mlkit-text-recognition", version = "18.0.2" }
 
 [bundles]
 kotlin                      = ["kotlin-stdlib", "kotlin-stdlib-jdk8", "kotlin-reflect"]
