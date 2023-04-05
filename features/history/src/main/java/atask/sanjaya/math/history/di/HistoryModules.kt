@@ -4,6 +4,9 @@ import android.content.Context
 import androidx.room.Room
 import atask.sanjaya.math.history.data.local.HistoryDao
 import atask.sanjaya.math.history.data.local.HistoryDatabase
+import com.google.mlkit.vision.text.TextRecognition
+import com.google.mlkit.vision.text.TextRecognizer
+import com.google.mlkit.vision.text.latin.TextRecognizerOptions
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -30,5 +33,9 @@ class HistoryModules {
     fun providesFavoriteDao(
         db: HistoryDatabase
     ): HistoryDao = db.historyDao()
+
+    @Provides
+    @Singleton
+    fun providesOcrClient(): TextRecognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)
 
 }

@@ -3,11 +3,14 @@ package atask.sanjaya.math.splash.presentation
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import dagger.hilt.android.AndroidEntryPoint
 import atask.sanjaya.ui.utils.repeatOnStarted
 import atask.sanjaya.math.splash.R
 import atask.sanjaya.math.splash.presentation.navigation.SplashExternalRoute
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.distinctUntilChanged
 import javax.inject.Inject
 
 /**
@@ -21,15 +24,17 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
      */
     @Inject
     lateinit var router: SplashExternalRoute
-    @Inject
-    lateinit var config: FirebaseRemoteConfig
+    private val viewModel: SplashViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         repeatOnStarted {
-            config.fetchAndActivate().addOnCompleteListener {
-                router.goToDashboard(requireContext())
-            }
+            viewModel.splashState
+                .distinctUntilChanged()
+                .collect {
+                    router.goToDashboard(requireContext())
+                }
         }
+        viewModel.initSplash()
     }
 }

@@ -34,9 +34,8 @@ class NetworkModules {
     fun providesOkHttpClient(
         baseUrlUseCase: BaseUrlConfigUseCase
     ): OkHttpClient = RetrofitUrlManager.getInstance().apply {
-        putDomain(BaseUrlConfigUseCase.OPEN_WEATHER_BASE_URL, baseUrlUseCase.getOpenWeatherBaseUrl())
-        putDomain(BaseUrlConfigUseCase.API_NINJA_BASE_URL, baseUrlUseCase.getApiNinjaBaseUrl())
-        setGlobalDomain(baseUrlUseCase.getOpenWeatherBaseUrl())
+        putDomain("string-res", "http://dev-nocodb.agreeculture.id/")
+        setGlobalDomain("https://dev-nocodb.agreeculture.id/")
     }.with(
         OkHttpClient.Builder()
             .connectTimeout(1, TimeUnit.MINUTES)
@@ -65,7 +64,7 @@ class NetworkModules {
         gson: Gson
     ): Retrofit = Retrofit.Builder()
         .client(okHttpClient)
-        .baseUrl(baseUrlUseCase.getOpenWeatherBaseUrl())
+        .baseUrl("https://dev-nocodb.agreeculture.id/")
         .addCallAdapterFactory(DataSourceCallAdapterFactory.create())
         .addConverterFactory(GsonConverterFactory.create(gson))
         .addCallAdapterFactory(CoroutineCallAdapterFactory())

@@ -7,4 +7,8 @@
     <string name="label_search">Search...</string>
     <string name="label_change">Change</string>
     <string name="label_favorites">Favorites</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_open_setting">Open Setting</string>
+    <string name="label_camera_permission_permanently_disabled_title">Ops, cannot access camera</string>
+    <string name="label_camera_permission_permanently_disabled_msg">Please give this app camera permission</string>
 </resources>

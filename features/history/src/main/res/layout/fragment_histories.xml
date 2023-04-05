@@ -12,14 +12,15 @@
         android:layout_height="match_parent"
         android:padding="@dimen/dimen_16dp">
 
+
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/label_history"
-            app:drawableEndCompat="@drawable/baseline_history_24"
             android:drawablePadding="@dimen/dimen_8dp"
+            android:text="@string/label_history"
             android:textAppearance="?attr/textAppearanceHeadlineMedium"
+            app:drawableEndCompat="@drawable/baseline_history_24"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,8 +40,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                tools:listitem="@layout/layout_row_histories"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/layout_row_histories" />
 
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
@@ -48,12 +49,22 @@
             android:id="@+id/btnAddInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:icon="@drawable/baseline_add_24"
             android:text="@string/label_add_input"
+            app:icon="@drawable/baseline_add_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnChangeLanguage"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="ID"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvTitle" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

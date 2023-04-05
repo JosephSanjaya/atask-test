@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="clicklistener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorBlack">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/cameraView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:background="@tools:sample/backgrounds/scenic" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvHeader"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_70dp"
+            android:alpha="0.5"
+            app:cardBackgroundColor="?attr/colorBlack"
+            app:cardCornerRadius="@dimen/dimen_0dp"
+            app:cardElevation="@dimen/dimen_0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/dimen_48dp"
+            android:layout_height="@dimen/dimen_48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:onClickListener="@{clicklistener}"
+            android:rotation="-90"
+            app:layout_constraintBottom_toBottomOf="@+id/cvHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cameraView"
+            app:srcCompat="@drawable/ic_arrow_upward"
+            app:tint="?attr/colorWhite"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            android:textColor="?attr/colorWhite"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnBack"
+            tools:text="Title" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvFooter"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_148dp"
+            android:alpha="0.5"
+            app:cardBackgroundColor="?attr/colorBlack"
+            app:cardCornerRadius="@dimen/dimen_0dp"
+            app:cardElevation="@dimen/dimen_0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cameraView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivOverlay"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/dimen_0dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/cvFooter"
+            app:layout_constraintEnd_toEndOf="@+id/cameraView"
+            app:layout_constraintStart_toStartOf="@id/cameraView"
+            app:layout_constraintTop_toBottomOf="@+id/cvHeader"
+            tools:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/btnTakePhoto"
+            android:layout_width="@dimen/dimen_64dp"
+            android:layout_height="@dimen/dimen_64dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:onClickListener="@{clicklistener}"
+            app:layout_constraintBottom_toBottomOf="@+id/cameraView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cvFooter"
+            app:srcCompat="@drawable/ic_camera_shutter"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/btnFlip"
+            android:layout_width="@dimen/dimen_64dp"
+            android:layout_height="@dimen/dimen_64dp"
+            android:layout_marginEnd="@dimen/dimen_48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:onClickListener="@{clicklistener}"
+            app:layout_constraintBottom_toBottomOf="@+id/cameraView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cvFooter"
+            app:srcCompat="@drawable/ic_flip_camera"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,10 +1,18 @@
+plugins {
+    id("com.google.devtools.ksp")
+}
+
 dependencies {
     implementation core.hilt.core
     kapt core.hilt.compiler
+    ksp core.room.compiler
     api project(':core:common')
+    api project(':core:network')
     api ui.material
     api ui.viewbinding.delegate
     api ui.swipe.refresh
     api ui.adapter
+    api ui.coil
+    api ui.bundles.restring
     api ui.bundles.camerax
 }

@@ -4,4 +4,6 @@
     <color name="fruit_salad_100">#4CAF50</color>
     <color name="persian_red_100">#CC2B2B</color>
     <color name="monza_100">#D1043E</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 </resources>

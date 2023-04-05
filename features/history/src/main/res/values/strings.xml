@@ -3,4 +3,6 @@
     <string name="label_history">History</string>
     <string name="label_add_input">Add Input</string>
     <string name="label_result">Result</string>
+    <string name="label_hello">Hello</string>
+    <string name="title_camera_get_expression">Capture Expression</string>
 </resources>
